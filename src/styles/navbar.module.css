@@ -1,0 +1,35 @@
+
+
+/* Chỉnh thông số mặc định của navbar */
+.container{
+    height: 98px;
+    padding: 0px 50px;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    width: 1519px;
+    margin: 0% auto;
+    position: sticky;
+}
+
+/* Chỉnh các thông tin trong footer */
+.list {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.listitem {
+    margin: 20px;
+    font-weight: 600;
+    font-family: 'Rowdies', cursive;
+    font-weight: 500;
+}
+.list1 {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content:flex-end;
+}
+

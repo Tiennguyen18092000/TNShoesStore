@@ -1,0 +1,24 @@
+/* Chỉnh thông số mặc định của footer */
+
+.footer{
+    background-color: black;
+    position: sticky;
+    font-family: 'jomhuria';
+    width: 1519px;
+    margin: 0% auto;   
+}
+
+/* Chỉnh các thông tin trong footer */
+.list{
+    list-style: none;
+    color: aliceblue;
+    margin-top: 5px;
+}
+.list1{
+    line-height: 2;
+}
+.list2{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}

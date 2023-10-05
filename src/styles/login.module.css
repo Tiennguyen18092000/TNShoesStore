@@ -1,0 +1,86 @@
+/* .form{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    flex: 1;
+    width: auto;
+    line-height: 100px;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+/*full trang login*/
+.main {
+    min-height: 100vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    line-height: 3;
+    width: 1380px;
+    margin: 0% auto;
+    position: relative;
+  }
+.form{
+    width: 500px;
+    margin: 0 auto;
+    
+}
+.card1{
+    box-shadow: 3px 9px 21px 0px rgba(0, 0, 0, 0.10), 12px 37px 39px 0px rgba(0, 0, 0, 0.09), 28px 83px 53px 0px rgba(0, 0, 0, 0.05), 49px 148px 63px 0px rgba(0, 0, 0, 0.01), 77px 232px 68px 0px rgba(0, 0, 0, 0.00);
+    border-radius: 20px;
+    border: 1px solid #1b1a1a;
+    width: 700px;
+    display: flex;
+    align-items: center;
+    margin:5% 0 5% 25%;
+    font-family: 'Rowdies', cursive;
+    padding-bottom: 3%;
+}
+.btn{
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 12px 27px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #999999;
+    background: #ffffff;
+    border: 3px solid #999999;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    -webkit-transition: ease-out 0.5s;
+    -moz-transition: ease-out 0.5s;
+}
+.btn::after,
+.btn::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    transition: .5s;
+}
+
+.btn::after {
+    top: -9px;
+    left: -9px;
+    border-top: 3px solid transparent;
+    border-left: 3px solid transparent;
+}
+
+.btn::before {
+    bottom: -9px;
+    right: -9px;
+    border-bottom: 3px solid transparent;
+    border-right: 3px solid transparent;
+}
+
+.btn:hover {
+    color: #222222;
+}
+
+.btn:hover::after,
+.btn:hover::before {
+    width: 50px;
+    height: 50px;
+    border-color: #222222;
+}

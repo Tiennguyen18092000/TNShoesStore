@@ -1,0 +1,17 @@
+.contain{
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    font-weight: 700;
+    width: 1380px;
+    margin: 0% auto;
+    position: relative;
+}
+.name{
+    font-family: 'Rowdies', cursive;
+  }
+  .name1{
+   
+    font-family: 'Roboto', sans-serif;
+  }
