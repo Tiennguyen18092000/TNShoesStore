@@ -1,0 +1,10 @@
+.main{
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    font-weight: 700;
+    width: 1380px;
+    margin: 0% auto;
+    position: relative;
+}

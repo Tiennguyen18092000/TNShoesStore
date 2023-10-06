@@ -81,23 +81,23 @@ export default function App(props: IAppProps) {
     const reducerOfPrice = (accumlator: any, currentValue: any) => accumlator + currentValue;
     const totalPrice = price.reduce(reducerOfPrice, 0);
     //global var
-    let Product;
+    let Products;
 
     //cart product increase function
     const cartProductIncrease = async (cartProduct: any) => {
         // console.log('day la cartProduct', cartProduct)
-        Product = cartProduct;
-        console.log('day la cProduct', Product)
-        Product.qty = Product.qty + 1;
-        Product.TotalProductPrice = Product.qty * Product.price;
-        console.log('day la qty', Product.price)
-        console.log('day la total', Product.TotalProductPrice)
+        Products = cartProduct;
+        console.log('day la cProduct', Products)
+        Products.qty = Products.qty + 1;
+        Products.TotalProductPrice = Products.qty * Products.price;
+        console.log('day la qty', Products.price)
+        console.log('day la total', Products.TotalProductPrice)
         //updating in db
         if (user) {
             const cartRef = doc(db, "cart " + user.uid, cartProduct.id);
             await updateDoc(cartRef, {
-                qty: Product.qty,
-                TotalProductPrice: Product.TotalProductPrice
+                qty: Products.qty,
+                TotalProductPrice: Products.TotalProductPrice
             }).then(() => {
                 console.log("add!");
             })
@@ -107,16 +107,16 @@ export default function App(props: IAppProps) {
     }
     //cart product decrease function
     const cartProductDecrease = async (cartProduct: any) => {
-        Product = cartProduct;
-        if (Product.qty > 1) {
-            Product.qty = Product.qty - 1;
-            Product.TotalProductPrice = Product.qty * Product.price;
+        Products = cartProduct;
+        if (Products.qty > 1) {
+            Products.qty = Products.qty - 1;
+            Products.TotalProductPrice = Products.qty * Products.price;
             //updating in db
             if (user) {
                 const cartRef = doc(db, "cart " + user.uid, cartProduct.id);
                 await updateDoc(cartRef, {
-                    qty: Product.qty,
-                    TotalProductPrice: Product.TotalProductPrice
+                    qty: Products.qty,
+                    TotalProductPrice: Products.TotalProductPrice
                 }).then(() => {
                     console.log("Decrement!");
                 })

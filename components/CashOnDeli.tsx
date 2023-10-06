@@ -26,9 +26,9 @@ export const CashOnDeli = ({ totalPrice, totalQty, cartProducts, qty }: any) => 
     const [address, setAddress] = useState('');
     const [cartPrice] = useState(totalPrice);
     const [cartQty] = useState(totalQty);
-
     const { user } = useAuth();
     const route = useRouter();
+
     const handleCashOnDelivery = async (e: any) => {
         e.preventDefault();
         console.log(phone, address, cartPrice, cartQty)
@@ -42,7 +42,7 @@ export const CashOnDeli = ({ totalPrice, totalQty, cartProducts, qty }: any) => 
             CartQty: cartQty,
             timeStamp: serverTimestamp()
         });
-        const cartData = await getDocs(collection(db, "Cart " + uid));
+        const cartData = await getDocs(collection(db, "cart " + uid));
         for (var snap of cartData.docs) {
             const data = snap.data();
             data.id = snap.id;
@@ -57,7 +57,7 @@ export const CashOnDeli = ({ totalPrice, totalQty, cartProducts, qty }: any) => 
             await addDoc(collection(db, "processing"), {
                 data
             });
-            await deleteDoc(doc(db, "Cart " + uid, snap.id));
+            await deleteDoc(doc(db, "cart " + uid, snap.id));
         }
         route.push('/collections');
     }

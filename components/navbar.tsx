@@ -155,6 +155,7 @@ export default function Navbar(){
                 <MenuItem>{user.email}</MenuItem>
                 <MenuItem style={{fontFamily: 'Karla'}}><Link href='/cart'><ShoppingCartIcon></ShoppingCartIcon> Cart</Link></MenuItem>
                 <MenuItem style={{fontFamily: 'Karla'}}> <Link href='/upload'><UploadIcon></UploadIcon> Upload</Link> </MenuItem>
+                <MenuItem style={{fontFamily: 'Karla'}}> <Link href='/history'><UploadIcon></UploadIcon>History</Link> </MenuItem>
                 <MenuItem style={{fontFamily: 'Karla'}} onClick={()=> {
                       logout()
                       router.push('/login')
