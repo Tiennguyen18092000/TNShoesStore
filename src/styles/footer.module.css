@@ -3,9 +3,9 @@
 .footer{
     background-color: black;
     font-family: 'jomhuria';
-    width: 1519px;
+    width: 1580px;
     margin: 0% auto;   
-    position: fixed;
+    position: relative;
 }
 
 /* Chỉnh các thông tin trong footer */

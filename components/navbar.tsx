@@ -58,7 +58,7 @@ export default function Navbar(){
   
   return (
     <>
-     <AppBar position="static" className={styles.container} sx={{ backgroundColor: 'white', color: 'black', zIndex:'50' }} >
+     <AppBar  className={styles.container} sx={{ backgroundColor: 'white', color: 'black', zIndex:'50' }} >
         <Grid container spacing={3} >
           <Grid item xs={4} className={styles.list}>
             <Link href="/">
