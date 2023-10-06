@@ -35,20 +35,20 @@ export const IndividualCartProduct = ({ cartProduct, cartProductIncrease, cartPr
                 <TableCell align="left">
                     <img src={cartProduct.imgURL} style={{ width: 57, height: 61 }} ></img>
                 </TableCell>
-                <TableCell align="left">{cartProduct.name}</TableCell>
-                <TableCell align="left">{cartProduct.brand}</TableCell>
-                <TableCell align="left">{cartProduct.size}</TableCell>
-                <TableCell align="left">{cartProduct.price}$ </TableCell>
-                <TableCell align="center" >
+                <TableCell className={styles.name2} align="left">{cartProduct.name}</TableCell>
+                <TableCell className={styles.name2} align="left">{cartProduct.brand}</TableCell>
+                <TableCell className={styles.name2} align="left">{cartProduct.size}</TableCell>
+                <TableCell className={styles.name2} align="left">{cartProduct.price}$ </TableCell>
+                <TableCell className={styles.name2} align="center" >
                     <Button onClick={handleCartProductIncrease} style={{color:'black'}} >
                         <AddIcon></AddIcon>
                     </Button>
-                    <div>{cartProduct.qty}</div>
+                    <div className={styles.name2}>{cartProduct.qty}</div>
                     <Button onClick={handleCartProductDecrease} style={{color:'black'}} >
                         <RemoveIcon></RemoveIcon>
                     </Button>
                 </TableCell>
-                <TableCell align="left">{cartProduct.TotalProductPrice}$</TableCell>
+                <TableCell className={styles.name2} align="left">{cartProduct.TotalProductPrice}$</TableCell>
                 <TableCell align="left"><Button onClick={handleDelete} style={{color:'black'}}><DeleteIcon /></Button></TableCell>
             </TableRow>
         </>

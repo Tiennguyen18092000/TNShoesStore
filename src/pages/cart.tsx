@@ -124,7 +124,6 @@ export default function App(props: IAppProps) {
                 console.log('user is not logged in to decrement');
             }
         }
-
     }
 
     const [page, setPage] = React.useState(0);
@@ -148,7 +147,7 @@ export default function App(props: IAppProps) {
                     <div>
                         <h1 className={styles.name}>Cart</h1>
                         <div>
-                            <Paper sx={{ width: '100%', mb: 2 }}>
+                            <Paper sx={{ width: '100%', mb: 2 }} className={styles.paper}>
 
                                 <TableContainer component={Paper}>
                                     <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
@@ -192,10 +191,11 @@ export default function App(props: IAppProps) {
                                 />
                             </Paper>
                         </div>
+                        <br></br>
                         <div className='box'>
                             <h3 className={styles.name1}>Cart Summary</h3>
                             <br />
-                            <TableContainer sx={{ maxWidth: 300, textAlign: 'left' }} component={Paper}>
+                            <TableContainer sx={{ maxWidth: 300, textAlign: 'left' }} component={Paper} className={styles.paper} >
                                 <Table sx={{ maxWidth: 300 }} size="small" aria-label="a dense table">
                                     <TableRow>
                                         <TableCell align="right">
@@ -227,9 +227,7 @@ export default function App(props: IAppProps) {
                                 <CashOnDeli totalPrice={totalPrice} totalQty={totalQty} cartProducts={cartProducts} qty={qty} />
                             </Modal>
                         </div>
-
                     </div>
-
                 )}
                 {cartProducts.length < 1 && (
                     <div >

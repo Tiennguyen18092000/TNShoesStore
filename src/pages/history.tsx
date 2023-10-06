@@ -59,22 +59,21 @@ export default function History(props: HistoryProps) {
             <main className={styles.main}>
                 {histories.length > 0 && (
                     <div>
-
-                        <h1>History Buy</h1>
+                        <h1 className={styles.name}>History Buy</h1>
                         <div>
-                            <Paper sx={{ width: '100%', mb: 2 }}>
+                            <Paper sx={{ width: '100%', mb: 2 }} className={styles.paper}>
                                 <TableContainer component={Paper}>
-                                    <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+                                    <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table" >
                                         <TableHead>
                                             <TableRow>
-                                                <TableCell align="right">DATE</TableCell>
-                                                <TableCell align="right">PRODUCT</TableCell>
-                                                <TableCell align="right">NAME</TableCell>
-                                                <TableCell align="right">BRAND</TableCell>
-                                                <TableCell align="right">SIZE</TableCell>
-                                                <TableCell align="right">PRICE</TableCell>
-                                                <TableCell align="right">QUANTITY</TableCell>
-                                                <TableCell align="right">SUBTOTAL</TableCell>
+                                                <TableCell className={styles.name}  align="right">DATE</TableCell>
+                                                <TableCell className={styles.name}  align="right">PRODUCT</TableCell>
+                                                <TableCell className={styles.name}  align="right">NAME</TableCell>
+                                                <TableCell className={styles.name}  align="right">BRAND</TableCell>
+                                                <TableCell className={styles.name}  align="right">SIZE</TableCell>
+                                                <TableCell className={styles.name}  align="right">PRICE</TableCell>
+                                                <TableCell className={styles.name}  align="right">QUANTITY</TableCell>
+                                                <TableCell className={styles.name}  align="right">SUBTOTAL</TableCell>
                                             </TableRow>
                                         </TableHead>
                                         <TableBody>

@@ -14,6 +14,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state';
 import { collection, onSnapshot } from 'firebase/firestore';
 import { db } from '../config/firebase';
+import WorkHistoryRoundedIcon from '@mui/icons-material/WorkHistoryRounded';
 
 
 export default function Navbar(){
@@ -155,7 +156,7 @@ export default function Navbar(){
                 <MenuItem>{user.email}</MenuItem>
                 <MenuItem style={{fontFamily: 'Karla'}}><Link href='/cart'><ShoppingCartIcon></ShoppingCartIcon> Cart</Link></MenuItem>
                 <MenuItem style={{fontFamily: 'Karla'}}> <Link href='/upload'><UploadIcon></UploadIcon> Upload</Link> </MenuItem>
-                <MenuItem style={{fontFamily: 'Karla'}}> <Link href='/history'><UploadIcon></UploadIcon>History</Link> </MenuItem>
+                <MenuItem style={{fontFamily: 'Karla'}}> <Link href='/history'><WorkHistoryRoundedIcon/>History</Link> </MenuItem>
                 <MenuItem style={{fontFamily: 'Karla'}} onClick={()=> {
                       logout()
                       router.push('/login')
