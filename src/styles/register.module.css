@@ -1,13 +1,15 @@
 /*full trang register*/
 
 .main {
-    min-height: 100vh;
-    flex: 1;
-    flex-direction: column;
-    line-height: 3;
-    width: 1380px;
-    margin: 6% auto;
-    position: relative;
+  flex: 1;
+  display: flex;
+  line-height: 3;
+  min-height: 100vh;
+  flex: 1;
+  flex-direction: row;
+  width: 1380px;
+  margin: 6% auto;
+  position: relative;
   }
 .form{
     width: 500px;
