@@ -14,6 +14,7 @@ import { useRouter } from 'next/router';
 import { Histories } from '../../components/Histories';
 import TablePagination from '@mui/material/TablePagination';
 import { IndividualHistory } from '../../components/IndividualHistory'
+import Head from 'next/head';
 export interface HistoryProps {
 }
 
@@ -56,6 +57,10 @@ export default function History(props: HistoryProps) {
     };
     return (
         <div>
+            <Head>
+            <title>TNShoesStore | History</title>
+            <meta name="keywords" content="Shoes"/>
+            </Head>
             <main className={styles.main}>
                 {histories.length > 0 && (
                     <div>
