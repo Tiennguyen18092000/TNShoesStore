@@ -7,9 +7,9 @@
     align-items: center;
     justify-content: space-between;
     top: 0;
-    width: 1519px;
+    width: 1500px;
     margin: 0% auto;
-    position: sticky;
+    position: fixed;
 }
 
 /* Chỉnh các thông tin trong footer */
