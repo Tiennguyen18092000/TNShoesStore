@@ -3,7 +3,10 @@
 /* Chỉnh thông số mặc định của homepage */
 .homepage{
   width: 1380px;
-  margin: 0% auto;
+  min-height: 100vh;
+  flex: 1;
+  flex-direction: row;
+  margin: 6% auto;
   position: relative;
 }
 
