@@ -41,16 +41,16 @@ export default function Home() {
           <h2 className={styles.name1}>Feeback</h2>
           <Grid container spacing={1}>
         <Grid item xs={4.5} className={styles.item}>
-        <img src="Feedback.jpg" alt='' width={420} />
+        <img src="Feedback.png" alt='' width={420} />
         </Grid>
         <Grid item xs={4} className={styles.item}>
-          <img src="Feedback2.jpg" alt='' width={360} />
+          <img src="Feedback2.png" alt='' width={360} />
         </Grid>
         {/* <Grid item xs={2.7} className={styles.item}>
           <img src="feedback4.jpg" alt='' width={360} height={270} />
         </Grid> */}
         <Grid item xs={2} className={styles.item}>
-          <img src="Feedback3.jpg" alt='' width={409} />
+          <img src="Feedback3.png" alt='' width={409} />
         </Grid>
         </Grid>
         </div>

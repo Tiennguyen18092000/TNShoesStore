@@ -165,18 +165,12 @@ export default function Navbar(){
             </div>
           ): (
             <>
-           
                 <li className={styles.listitem}>
                     <Link href='/login'>
                         Login
                     </Link>
                 </li>
-                <li className={styles.listitem}>
-                    <Link href='/register'>
-                        Register
-                    </Link>
-                </li>
-                </>
+              </>
           )}      
         </ul>
         </Grid>
