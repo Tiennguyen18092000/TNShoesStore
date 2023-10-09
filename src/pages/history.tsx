@@ -61,11 +61,13 @@ export default function History(props: HistoryProps) {
             <title>TNShoesStore | History</title>
             <meta name="keywords" content="Shoes"/>
             </Head>
+            <h1 className={styles.name}>History Buy</h1>
             <main className={styles.main}>
+                
                 {histories.length > 0 && (
-                    <div>
-                        <h1 className={styles.name}>History Buy</h1>
-                        <div>
+                    <div >
+                        
+                        <div className={styles.histories}>
                             <Paper sx={{ width: '100%', mb: 2 }} className={styles.paper}>
                                 <TableContainer component={Paper}>
                                     <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table" >

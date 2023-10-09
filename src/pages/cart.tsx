@@ -142,13 +142,15 @@ export default function App(props: IAppProps) {
             <title>TNShoesStore | Cart</title>
             <meta name="keywords" content="Shoes"/>
         </Head>
+         <h1 className={styles.name}>Cart</h1>
             <main className={styles.cartpage}>
+           
                 {cartProducts.length > 0 && (
                     <div>
-                        <h1 className={styles.name}>Cart</h1>
-                        <div>
-                            <Paper sx={{ width: '100%', mb: 2 }} className={styles.paper}>
-
+                        <div className={styles.table}>
+                        <Grid container spacing={2} >
+                            <Grid item xs={8}>
+                            <Paper sx={{ width: '100%'  }} className={styles.paper}>
                                 <TableContainer component={Paper}>
                                     <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
                                         <TableHead>
@@ -180,7 +182,7 @@ export default function App(props: IAppProps) {
                                         </TableBody>
                                     </Table>
                                 </TableContainer>
-                                <TablePagination
+                                {/* <TablePagination
                                     rowsPerPageOptions={[5, 10, 25]}
                                     component="div"
                                     count={cartProducts.length}
@@ -188,14 +190,11 @@ export default function App(props: IAppProps) {
                                     page={page}
                                     onPageChange={handleChangePage}
                                     onRowsPerPageChange={handleChangeRowsPerPage}
-                                />
+                                /> */}
                             </Paper>
-                        </div>
-                        <br></br>
-                        <div className='box'>
-                            <h3 className={styles.name1}>Cart Summary</h3>
-                            <br />
-                            <TableContainer sx={{ maxWidth: 300, textAlign: 'left' }} component={Paper} className={styles.paper} >
+                            </Grid>
+                            <Grid item xs={4}>
+                            <TableContainer sx={{ maxWidth: 300 }}  component={Paper} className={styles.paper} >
                                 <Table sx={{ maxWidth: 300 }} size="small" aria-label="a dense table">
                                     <TableRow>
                                         <TableCell align="right">
@@ -216,6 +215,14 @@ export default function App(props: IAppProps) {
 
                                 </Table>
                             </TableContainer>
+                            </Grid>
+                        </Grid>
+                        </div>
+                        
+                        <div className='box'>
+                            {/* <h3 className={styles.name1}>Cart Summary</h3> */}
+                         
+                            
                             <br />
                             <Button onClick={handleOpen}variant="contained" className={styles.btn1}>Checkout</Button>
                             <Modal

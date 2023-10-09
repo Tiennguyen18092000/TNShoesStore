@@ -4,9 +4,9 @@
     font-weight: 700;
     flex: 1;
     flex-direction: row;
-    width: 1380px;
     margin: 6% auto;
     position: relative;
+    width: 1380px;
 }
 .name{
     font-family: 'Rowdies', cursive;

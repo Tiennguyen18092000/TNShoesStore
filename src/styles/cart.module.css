@@ -1,17 +1,15 @@
 .cartpage{
     min-height: 100vh;
     flex-direction: row;
-    display: flex;
     text-align: center;
     font-weight: 700;
     width: 1380px;
-    margin: 6% auto;
+    margin: 6% auto 0 10%;
     position: relative;
 }
-
-
 .name{
     font-family: 'Rowdies', cursive;
+    margin: 3% auto 0% 7% ;  
 }
 .name1{
     font-family: 'Lilita One', cursive;
@@ -73,6 +71,11 @@
 
 .paper{
   border: 1px solid #1b1a1a;
+  display: flex;
   border-radius:7px;
   box-shadow: 3px 9px 21px 0px rgba(0, 0, 0, 0.10), 12px 37px 39px 0px rgba(0, 0, 0, 0.09), 28px 83px 53px 0px rgba(0, 0, 0, 0.05), 49px 148px 63px 0px rgba(0, 0, 0, 0.01), 77px 232px 68px 0px rgba(0, 0, 0, 0.00);
+}
+.table{
+  display: flex;
+  
 }

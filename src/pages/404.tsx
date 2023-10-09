@@ -48,12 +48,7 @@ export default function Notfound(){
                 <div className={styles.star}></div>
                 <div className={styles.star}></div>
                 <div className={styles.star}></div>
-                
             </div>
-            
-
-      
-        
        </div>
     </>
 )
