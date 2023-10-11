@@ -224,7 +224,7 @@ export default function App(props: IAppProps) {
                          
                             
                             <br />
-                            <Button onClick={handleOpen}variant="contained" className={styles.btn1}>Checkout</Button>
+                            <button onClick={handleOpen}  className={styles.btn1}>Checkout</button>
                             <Modal
                                 open={open}
                                 onClose={handleClose}

@@ -192,7 +192,7 @@ console.log('day la data ', data);
                 <>
                   <div >
                     <img src={previewUrl} style={{ width: '80%', marginTop: '1%' }} />
-                    <Button type='button' className={styles.btn} onClick={pickedimghandler}>Edit image </Button>
+                    <button type='button' className={styles.btn} onClick={pickedimghandler}>Edit image </button>
                   </div>
                 </>
               }
@@ -289,7 +289,7 @@ console.log('day la data ', data);
                 }
                 {isUpdate &&
                   <>
-                    <Button type='submit' onClick={updateFields} className={styles.btn1}>UPDATE</Button>
+                    <button type='submit' onClick={updateFields} className={styles.btn1}>UPDATE</button>
                   </>
                 }
                 </div>
@@ -341,8 +341,8 @@ console.log('day la data ', data);
                                 <TableCell align="right" style={{fontFamily:'Karla'}}>{product.brand}</TableCell>
                                 <TableCell align="right"></TableCell>
                                 <TableCell align="right" style={{fontFamily:'Karla'}}>{product.price}$ </TableCell>
-                                <TableCell align="right" style={{fontFamily:'Karla'}}><Button className={styles.btn1} style={{ width:120}} onClick={() => GetId(product.id,  product.imgURL, product.name, product.brand, product.price, product.detail)} >Upload</Button></TableCell>
-                                <TableCell align="right" style={{fontFamily:'Karla'}}><Button className={styles.btn1} style={{ width:120}} onClick={() => handleDelete(product.id)}>Delete</Button></TableCell>
+                                <TableCell align="right" style={{fontFamily:'Karla'}}><button className={styles.btn1} style={{ width:120}} onClick={() => GetId(product.id,  product.imgURL, product.name, product.brand, product.price, product.detail)} >Upload</button></TableCell>
+                                <TableCell align="right" style={{fontFamily:'Karla'}}><button className={styles.btn1} style={{ width:120}} onClick={() => handleDelete(product.id)}>Delete</button></TableCell>
                               </TableRow>
                             </>
                           )
