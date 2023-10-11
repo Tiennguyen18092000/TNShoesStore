@@ -70,7 +70,7 @@ export default function Login(){
                         value={data.password}
                     />
                     <hr/>
-            <Button type="submit" className={styles.btn} >Login</Button>
+            <button type="submit" className={styles.btn} >Login</button>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <Link href='/register'>Register</Link>
             </div>

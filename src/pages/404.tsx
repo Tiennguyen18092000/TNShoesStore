@@ -28,7 +28,7 @@ export default function Notfound(){
     <div className={styles.bgpurple}>
      <div className={styles.centralbody}>
                 <img className={styles.image404} src="http://salehriaz.com/404Page/img/404.svg" alt='' width={300}/>
-                <Button href="/" className={styles.btn} style={{marginLeft:'35%'}}>GO BACK HOME</Button>
+                <button  className={styles.btn} style={{marginLeft:'35%'}}><Link href="/">GO BACK HOME</Link></button>
             </div>
             <div className={styles.objects}>
                 <img className={styles.object_rocket} src="http://salehriaz.com/404Page/img/rocket.svg" width="40px"/>

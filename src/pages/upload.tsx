@@ -284,7 +284,7 @@ console.log('day la data ', data);
                 <div style={{display:'flex', justifyContent:'center'}}>
                 {!isUpdate &&
                   <>
-                    <Button type='submit' className={styles.btn1}>Submit</Button>
+                    <button type='submit' className={styles.btn1}>Submit</button>
                   </>
                 }
                 {isUpdate &&

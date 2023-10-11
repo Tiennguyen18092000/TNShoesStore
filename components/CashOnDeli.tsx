@@ -103,7 +103,7 @@ export const CashOnDeli = ({ totalPrice, totalQty, cartProducts, qty }: any) => 
                         disabled
                     />
                     <div style={{textAlign: 'center',paddingTop: '5%'}}>
-                        <Button type='submit' className={styles.btn1} >Submit</Button>
+                        <button type='submit' className={styles.btn1} >Submit</button>
                     </div>
                 </form>
             </Box>

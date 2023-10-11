@@ -52,13 +52,12 @@
     background-position: left top;
     height: 100%;
     overflow: hidden;
-    
     text-align: center;
     font-weight: 700;
     flex: 1;
     flex-direction: row;
     width: 1380px;
-    margin: 6% auto;
+    margin: 6% ;
     position: relative;
     
 }

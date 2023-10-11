@@ -143,7 +143,7 @@ export default function Details({ proProps }: any) {
                     />
                   ))} 
                 </div>
-                <Button variant="outlined" className={styles.btn2} onClick={handleAddToCart}>Add to card</Button>
+                <button  className={styles.btn2} onClick={handleAddToCart}>Add to card</button>
                 </div>
                 </Card>
             </Grid>

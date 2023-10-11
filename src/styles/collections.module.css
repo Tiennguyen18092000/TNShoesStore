@@ -50,7 +50,6 @@
   display: flex;
   justify-content: space-between;
 }
-
 /* Chỉnh nút trong trang details*/
 .btn2 {
   appearance: none;
@@ -92,7 +91,6 @@
   box-shadow: none;
   transform: translateY(0);
 }
-
 .name{
   font-family: 'Rowdies', cursive;
 }

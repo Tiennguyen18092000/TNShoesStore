@@ -100,7 +100,7 @@ export default function Register(){
                             required
                     />
                     <hr />
-            <Button type='submit' className={styles.btn}  style={{lineHeight:2}}>Register</Button>
+            <button type='submit' className={styles.btn}  style={{lineHeight:2}}>Register</button>
             </form>
             </div>
             </Card>
