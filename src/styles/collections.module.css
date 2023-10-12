@@ -13,7 +13,7 @@
 }
 /* Chỉnh card */
 .card{
-    border-radius:6%;
+    border-radius:10px;
     width: 100%;
     float: left;
     background: #fff;
@@ -27,7 +27,7 @@
 /* Chỉnh hình trong trang details */
 .card1{
     box-shadow: 3px 9px 21px 0px rgba(0, 0, 0, 0.10), 12px 37px 39px 0px rgba(0, 0, 0, 0.09), 28px 83px 53px 0px rgba(0, 0, 0, 0.05), 49px 148px 63px 0px rgba(0, 0, 0, 0.01), 77px 232px 68px 0px rgba(0, 0, 0, 0.00);
-    border-radius: 6%;
+    border-radius: 10px;
     border: 1px solid #1b1a1a;
     width: 500px;
 }
@@ -36,7 +36,7 @@
 .card2{
     border: 1px solid #1b1a1a;
     width: 875px;
-    border-radius:5%;
+    border-radius:10px;
     height: 500px;
     box-shadow: 3px 9px 21px 0px rgba(0, 0, 0, 0.10), 12px 37px 39px 0px rgba(0, 0, 0, 0.09), 28px 83px 53px 0px rgba(0, 0, 0, 0.05), 49px 148px 63px 0px rgba(0, 0, 0, 0.01), 77px 232px 68px 0px rgba(0, 0, 0, 0.00);
     margin-left: 4.5%;
