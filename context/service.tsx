@@ -24,7 +24,4 @@ const addProduct = async (job = {}) => {
         alert(err.message);
     }
 }
-
-
-
 export { getProductList, addProduct}

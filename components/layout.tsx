@@ -7,7 +7,6 @@ export default function Layout({children}:{ children: ReactElement}){
     return(
         <>
        <div>
-       
        <AuthContextProvider>
        <Navbar/>
         <main>{children}</main>

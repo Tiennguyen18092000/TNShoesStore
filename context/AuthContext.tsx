@@ -1,4 +1,4 @@
-import {createContext, useContext, useEffect, useState} from 'react'
+import React, {createContext, useContext, useEffect, useState} from 'react'
 import {
     onAuthStateChanged,
     createUserWithEmailAndPassword,
@@ -6,7 +6,7 @@ import {
     signOut
 } from 'firebase/auth'
 import {auth} from '../config/firebase'
-import router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 
 const AuthContext = createContext<any> ({})
@@ -15,7 +15,6 @@ export const useAuth = () => useContext(AuthContext)
 
 export const AuthContextProvider = ({children}:{children:React.ReactNode}) => {
     const [user, setUser] = useState<any>(null)
-
     const [loading, setLoading] = useState(true)
     const router = useRouter()
     //const router = useRouter()
@@ -35,8 +34,6 @@ export const AuthContextProvider = ({children}:{children:React.ReactNode}) => {
         })
         return () => unsubcribe()
     }, [])
-
-
 
     console.log("user ::::",user)
     const signup = (email: string, password: string) => {

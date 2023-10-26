@@ -365,7 +365,7 @@ console.log('day la data ', data);
 
             )}
             {products.length < 1 && (
-              <div>
+              <div className={styles.name}>
                 No products to Show
               </div>
             )}

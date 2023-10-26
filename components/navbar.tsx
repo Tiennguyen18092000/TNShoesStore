@@ -9,12 +9,14 @@ import Button from '@mui/material/Button';
 import { Avatar, Fade, Icon, Menu, MenuItem, Popover } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import UploadIcon from '@mui/icons-material/Upload';
 import LogoutIcon from '@mui/icons-material/Logout';
-import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state';
 import { collection, onSnapshot } from 'firebase/firestore';
 import { db } from '../config/firebase';
 import WorkHistoryRoundedIcon from '@mui/icons-material/WorkHistoryRounded';
+import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+import MailIcon from '@mui/icons-material/Mail';
+
 
 
 export default function Navbar(){
@@ -26,14 +28,14 @@ export default function Navbar(){
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const {user, logout} = useAuth()
-  console.log("user ", user)
+  const {user , logout} = useAuth()
+  console.log("user", user)
 
   const router = useRouter()
 
   const [urole, setUrole] = useState([]);
   useEffect(() => {
-    if (user) {
+    if (user) { 
       onSnapshot(
         collection(db, "user" + user.uid),
         (snapShot) => {
@@ -50,11 +52,19 @@ export default function Navbar(){
     }
   }, [user])
   console.log('urole', urole);
+
   const role = urole.map((rolee: any) => {
     return rolee.role;
   })
-  console.log('role ', urole);
+//   const role = ["admin"]
+//   if (user && role.includes("admin")) {
+//   // Người dùng có vai trò "admin"
+// } else {
+//   // Người dùng không có vai trò "admin"
+// }
+  console.log('role', role);
 
+  
   
   return (
     <>
@@ -89,50 +99,13 @@ export default function Navbar(){
             </li>   
           </ul>
         </Grid>
+        
         <Grid item xs={4} className={styles.item}>
         <Grid item xs={4} style={{ textAlign: 'end', display: 'contents' }}>
-          {user && role.length > 0 &&
-            <>
-              <div className={styles.list} style={{ marginTop: '2%' }}>
-                <PopupState variant="popover" popupId="demo-popup-popover">
-                  {(popupState: any) => (
-                    <div >
-                      <Button variant="contained" {...bindTrigger(popupState)}>
-                        Admin
-                      </Button>
-                      <Popover
-                        {...bindPopover(popupState)}
-                        anchorOrigin={{
-                          vertical: 'bottom',
-                          horizontal: 'center',
-                        }}
-                        transformOrigin={{
-                          vertical: 'top',
-                          horizontal: 'center',
-                        }}
-                      >
-                        <div style={{ display: 'grid' }}>
-                          <Link href='/upload'>
-                            <Button>Upload</Button>
-                          </Link>
-                          <Link href='/customers'>
-                            <Button>Customers</Button>
-                          </Link>
-                          <Link href='/order'>
-                            <Button>Pending</Button>
-                          </Link>
-                        </div>
-                      </Popover>
-                    </div>
-                  )}
-                </PopupState>
-              </div>
-            </>
-          }
           <ul className={styles.list1}>
             {user ? (
               <div>
-                
+      
                 <Button
                   id="fade-button"
                   aria-controls={open ? 'fade-menu' : undefined}
@@ -140,7 +113,6 @@ export default function Navbar(){
                   aria-expanded={open ? 'true' : undefined}
                   onClick={handleClick}
                 >
-                  
                   <Avatar src="/Shin.jpg"></Avatar>
                 </Button>
               <Menu
@@ -153,10 +125,44 @@ export default function Navbar(){
                 onClose={handleClose}
                 TransitionComponent={Fade}
               >
-                <MenuItem>{user.email}</MenuItem>
-                <MenuItem style={{fontFamily: 'Karla'}}><Link href='/cart'><ShoppingCartIcon></ShoppingCartIcon> Cart</Link></MenuItem>
-                <MenuItem style={{fontFamily: 'Karla'}}> <Link href='/upload'><UploadIcon></UploadIcon> Upload</Link> </MenuItem>
-                <MenuItem style={{fontFamily: 'Karla'}}> <Link href='/history'><WorkHistoryRoundedIcon/>History</Link> </MenuItem>
+
+     {/* Admin */}
+        {user && urole.length > 0 &&
+            <>
+              <div >
+                <PopupState variant="popover" popupId="demo-popup-popover">
+                  {(PopupState: any) => (
+                    <div >
+                      <MenuItem {...bindTrigger(PopupState)} style={{color:'red'}}><AdminPanelSettingsIcon/>
+                        Admin
+                      </MenuItem>
+                      <Popover
+                        {...bindPopover(PopupState)}
+                        anchorOrigin={{
+                          vertical: 'bottom',
+                          horizontal: 'center',
+                        }}
+                        transformOrigin={{
+                          vertical: 'top',
+                          horizontal: 'center',
+                        }}
+                      >
+                        <div>
+                        <MenuItem><Link href='/upload'>Upload</Link></MenuItem>
+                        <MenuItem><Link href='/customer'>Customer</Link></MenuItem>
+                        <MenuItem><Link href='/pending'>Pending</Link></MenuItem>
+                        </div>
+                      </Popover>
+                    </div>
+                  )}
+                </PopupState>
+              </div>
+            </>
+          }
+
+                <MenuItem><MailIcon/>{user.email}</MenuItem>
+                <MenuItem style={{fontFamily: 'Karla'}}><Link href='/cart'><ShoppingCartIcon/> Cart</Link></MenuItem>
+                <MenuItem style={{fontFamily: 'Karla'}}> <Link href='/history'><WorkHistoryRoundedIcon/>History</Link></MenuItem>
                 <MenuItem style={{fontFamily: 'Karla'}} onClick={()=> {
                       logout()
                       router.push('/login')

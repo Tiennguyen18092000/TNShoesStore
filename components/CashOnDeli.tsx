@@ -20,8 +20,8 @@ const style = {
 };
 
 export const CashOnDeli = ({ totalPrice, totalQty, cartProducts, qty }: any) => {
-    console.log('day laaaaaaaaa cart prodycttt', cartProducts);
-    console.log('day laaaaaaaaa quan tyy', qty);
+    console.log('day la cart prodycttt', cartProducts);
+    console.log('day la quan tyy', qty);
     const [phone, setPhone] = useState('');
     const [address, setAddress] = useState('');
     const [cartPrice] = useState(totalPrice);
@@ -33,7 +33,7 @@ export const CashOnDeli = ({ totalPrice, totalQty, cartProducts, qty }: any) => 
         e.preventDefault();
         console.log(phone, address, cartPrice, cartQty)
         const uid = user.uid;
-        console.log('user datatatata', user.email);
+        console.log('user data', user.email);
         await addDoc(collection(db, "Customer Infomation"), {
             Email: user.email,
             Phone: phone,
@@ -42,7 +42,7 @@ export const CashOnDeli = ({ totalPrice, totalQty, cartProducts, qty }: any) => 
             CartQty: cartQty,
             timeStamp: serverTimestamp()
         });
-        const cartData = await getDocs(collection(db, "cart " + uid));
+        const cartData = await getDocs(collection(db, "cart " + user.id));
         for (var snap of cartData.docs) {
             const data = snap.data();
             data.id = snap.id;
@@ -51,7 +51,7 @@ export const CashOnDeli = ({ totalPrice, totalQty, cartProducts, qty }: any) => 
             data['CartPrice'] = cartPrice;
             data['CartQty'] = cartQty;
             data['timeStamp'] = serverTimestamp()
-            await addDoc(collection(db, "Customer-Cart " + uid), {
+            await addDoc(collection(db, "Customer-Cart" + uid), {
                 data,
             });
             await addDoc(collection(db, "processing"), {

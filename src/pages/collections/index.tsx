@@ -107,6 +107,7 @@ export default function Collection(){
                 <Grid item xs={15}>
                   {/* <Filters onsubmit={handleFiltersChange}/> */}
                     <Collections {...{productsFilter, sortProducts,filters,setFilters}}/> 
+                    
                 </Grid>
             </Grid>
           </div>
