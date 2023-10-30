@@ -88,8 +88,8 @@ export default function Navbar(){
               </Link>
             </li>
             <li className={styles.listitem}>
-              <Link href="/404">
-                Sale off
+              <Link href="/SpaService">
+              Service
               </Link>
             </li>
             <li className={styles.listitem}>
