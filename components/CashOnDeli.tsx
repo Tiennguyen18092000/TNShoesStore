@@ -57,9 +57,9 @@ export const CashOnDeli = ({ totalPrice, totalQty, cartProducts, qty }: any) => 
             await addDoc(collection(db, "processing"), {
                 data
             });
-            await deleteDoc(doc(db, "cart " + uid, snap.id));
+            await deleteDoc(doc(db, "cart " +uid, snap.id));
         }
-        route.push('/collections');
+        route.push('/Home');
     }
     return (
         <div>

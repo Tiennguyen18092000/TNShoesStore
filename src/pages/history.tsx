@@ -27,7 +27,7 @@ export default function History(props: HistoryProps) {
     useEffect(() => {
         if (user) {
             onSnapshot(
-                collection(db, "Customer-Cart " + user.uid),
+                collection(db, "Customer-Cart" + user.uid),
                 (snapShot) => {
                     let list = [] as any;
                     snapShot.docs.forEach((doc) => {
