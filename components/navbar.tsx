@@ -149,7 +149,6 @@ export default function Navbar(){
                       >
                         <div>
                         <MenuItem><Link href='/upload'>Upload</Link></MenuItem>
-                        <MenuItem><Link href='/customer'>Customer</Link></MenuItem>
                         <MenuItem><Link href='/pending'>Pending</Link></MenuItem>
                         </div>
                       </Popover>

@@ -59,7 +59,8 @@ export const CashOnDeli = ({ totalPrice, totalQty, cartProducts, qty }: any) => 
             });
             await deleteDoc(doc(db, "cart " +uid, snap.id));
         }
-        route.push('/Home');
+        alert('Mua hàng thành công')
+        route.push('/');
     }
     return (
         <div>
